@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar  2 21:53:27 2023
-
-@author: Maria
-"""
-
 import json
 import networkx as nx
 
