@@ -3,6 +3,9 @@
 Created on Thu Mar 23 20:14:47 2023
 
 @author: Maria
+
+Gera um grafo com a relação entre os seguidores de uma conta semente e os 
+seguidores dos seguidores dela.
 """
 
 import instaloader
