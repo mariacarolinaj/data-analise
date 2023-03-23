@@ -2,7 +2,11 @@
 """
 Created on Thu Mar 23 20:38:47 2023
 
-@author: Maria
+@author: 
+    
+Antes de executar o script, instalar o Mozzila Firefox e realizar o login no 
+Instagram por lá. Depois, no terminal executar:
+    >>> python '.\Script de login - Instaloader.py'
 """
 
 from argparse import ArgumentParser
