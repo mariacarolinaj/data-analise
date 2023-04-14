@@ -7,7 +7,7 @@ Created on Thu Mar 23 20:47:55 2023
 
 from googleapiclient.discovery import build
 
-api_key = ""
+api_key = "AIzaSyCAqUYWQAIG4eMk73De0Xu2NgGBlbabCIA"
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 channel_id = "UCLkAepWjdylmXSltofFvsYQ"

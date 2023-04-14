@@ -23,7 +23,9 @@ accounts = data['id'].tolist()
 colunas_a_remover = ['id', 'screenName', 'tags', 'avatar', 'followersCount', 'friendsCount',
        'lang', 'lastSeen', 'tweetId']
 
-followers = data.iloc[:, 9:]
+#followers = data.iloc[:, 9:]
+
+followers = data.drop(colunas_a_remover, axis=1)
 
 df_concatenado = pd.concat([followers[coluna] for coluna in followers.columns], axis=1, join='outer', ignore_index=False, keys=None, sort=False, verify_integrity=False, copy=True)
 print(followers)

@@ -10,6 +10,8 @@ seguidores dos seguidores dela.
 
 import instaloader
 import networkx as nx
+import matplotlib.pyplot as plt
+#import community
 
 def obterFollowers(username):
     il = instaloader.Instaloader()
@@ -44,3 +46,24 @@ for follower in followersPerfilGerador:
     
 nx.draw(graph, with_labels=True, arrows=True)
 
+# Análise: principais nós a partir do grau de centralidade
+centrality = nx.degree_centrality(graph)
+
+for node, centrality_value in centrality.items():
+    print(node, centrality_value)
+
+colors = [centrality[node] for node in graph.nodes()]
+nx.draw(graph, node_color=colors, with_labels=True)
+plt.show()
+
+"""
+# Análise: identificação de comunidades
+partition = community.best_partition(graph)
+
+qtdCommunities = len(set(partition.values()))
+print("Quantidade de comunidades encontradas:", qtdCommunities)
+
+colors = [partition[node] for node in graph.nodes()]
+nx.draw(graph, node_color=colors, with_labels=True)
+plt.show()
+"""
