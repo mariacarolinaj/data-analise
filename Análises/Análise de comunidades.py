@@ -67,6 +67,8 @@ def analysis(csv_file_name):
     df['gostou'] = df['sentimento'].apply(lambda x: 1 if x >= limiar_sentimento else 0)
     df['nao_gostou'] = df['sentimento'].apply(lambda x: 1 if x < -limiar_sentimento else 0)
     
+    print(file)
+    
     # Realiza uma análise um pouco mais detalhada de cada uma das duas comunidades delimitadas:
     for comunidade_id in df['comunidade'].unique():
         
@@ -101,7 +103,6 @@ def analysis(csv_file_name):
 social_networks_files = ['Twitter_dataset.csv', 'Youtube_dataset.csv', 'Instagram_dataset.csv']
 
 for file in social_networks_files:
-    print(file)
     analysis(file)
     print ()
 
